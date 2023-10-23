@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Boca Raton",
+    "latitude": 26.3683,
+    "longitude": -80.1289,
+
+    "link": "boca_raton"
+  },
+  {
+    "name": "Palm Beach",
+    "latitude": 26.7153,
+    "longitude": -80.0534,
+
+    "link": "palm_beach"
+  },
+  {
+    "name": "Delray Beach",
+    "latitude": 26.4615,
+    "longitude": -80.0728,
+
+    "link": "delray_beach"
+  },
+  {
+    "name": "Boynton Beach",
+    "latitude": 26.5253,
+    "longitude": -80.0664,
+
+    "link": "boynton_beach"
+  }
+]

@@ -5,9 +5,11 @@ import FooterTitle from "./FooterTitle";
 import FooterLink from "./FooterLink";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import floridaCities from "../../object/cities.json"; // Import the JSON module
+import { useState } from "react";
 
 const Footer = () => {
-  const citiesLocations = ["Palm Beach", "Boca Raton", "Boynton Beach"];
+  const [cities, setCities] = useState(floridaCities);
 
   const CurrentYear = () => {
     const date = new Date();
@@ -57,9 +59,11 @@ const Footer = () => {
       </StackColumn>
       <StackColumn>
         <FooterTitle text={"Our Locations"} />
-        {citiesLocations.map((city) => (
+        {cities.map((city, index) => (
           <>
-            <FooterLink text={city} />
+            <Link key={index} href={`../city/${city.link}`}>
+              {city.name}
+            </Link>
           </>
         ))}
       </StackColumn>

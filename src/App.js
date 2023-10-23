@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Locations from "./pages/Locations";
 import Contact from "./pages/Contact";
+import CityPage from "./city/CityPage";
 
 //componentes
 import Navbar from "./components/Navbar";
@@ -19,7 +20,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-
+          <Route path="/city/:link" element={<CityPage />} />
           <Route path="/locations" element={<Locations />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
