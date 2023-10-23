@@ -1,10 +1,10 @@
 import React from "react";
-import Locations from "../components/Locations";
+import Cities from "../components/Cities";
 
 const Locations = () => {
   return (
     <>
-      <Locations />
+      <Cities />
     </>
   );
 };

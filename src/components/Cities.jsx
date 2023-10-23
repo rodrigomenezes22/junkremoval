@@ -1,7 +1,7 @@
 import { Typography } from "@mui/material";
 import React from "react";
-
-function Locations() {
+import Stack from "@mui/material/Stack";
+function Cities() {
   return (
     <Stack
       component="section"
@@ -13,10 +13,10 @@ function Locations() {
         px: 2,
       }}>
       <Typography variant="h2" component="h1">
-        Locations
+        Cities
       </Typography>
     </Stack>
   );
 }
 
-export default Locations;
+export default Cities;
