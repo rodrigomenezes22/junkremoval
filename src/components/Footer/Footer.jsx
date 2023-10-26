@@ -45,9 +45,9 @@ const Footer = () => {
       }}>
       <StackColumn>
         <FooterTitle text={"address"} />
-        <FooterLink text={"15th Louis St, london 92382, eng"} />
-        <FooterLink text={"25 999-345-10800"} />
-        <FooterLink text={"info@housesales.com"} />
+        <FooterLink text={"1030 N State Street - FL"} />
+        <FooterLink text={"561-213-9528"} />
+        <FooterLink text={"info@junkremovalservices.com"} />
       </StackColumn>
 
       <StackColumn>
@@ -69,7 +69,7 @@ const Footer = () => {
       </StackColumn>
 
       <StackColumn>
-        <FooterTitle text={"hBSales"} />
+        <FooterTitle text={"Junk Removal Services"} />
         <Stack
           direction="row"
           width="70px"

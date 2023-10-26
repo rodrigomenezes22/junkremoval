@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Stack } from "@mui/material";
+import { Button, Stack, Typography } from "@mui/material";
 import Title from "./Title";
 import Paragraph from "./Paragraph";
 import { Link } from "react-router-dom";
@@ -11,19 +11,22 @@ const GetInTouch = () => {
       direction="column"
       justifyContent="center"
       alignItems="center"
+      backgroundColor="#1565c0"
       sx={{
         py: 10,
-        mx: 6,
       }}>
-      <Title text={"Call the Guy to remove your Junk!"} textAlign={"center"} />
-      <Paragraph
-        text={
-          "Call us at any time, we are ready to take on your task! Schedule an appointment today!"
-        }
-        maxWidth={"sm"}
-        mx={0}
-        textAlign={"center"}
-      />
+      <Typography
+        variant="h3"
+        component="h1"
+        sx={{
+          fontWeight: 700,
+          color: "#fff",
+        }}>
+        Call us!{" "}
+      </Typography>
+      <Typography variant="body1" color={"white"}>
+        We are available by phone, WhatsApp and email.
+      </Typography>
       <Button
         component={Link}
         to={"/contact"}

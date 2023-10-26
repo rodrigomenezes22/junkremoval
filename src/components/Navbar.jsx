@@ -59,11 +59,12 @@ const Navbar = () => {
       elevation={0}>
       <StyledToolbar>
         <Typography variant="h6" component="h2">
-          JunkRemovalGuy
+          JunkRemovalServices
         </Typography>
         <Box sx={{ display: { xs: "block", sm: "none" } }}>
           <DrawerItem />
         </Box>
+
         <ListMenu>
           {itemList.map((item) => {
             const { text } = item;
