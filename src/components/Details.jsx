@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { Box, Button, Stack, TextField } from "@mui/material";
 import Title from "./Title";
 import Paragraph from "./Paragraph";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 
 const Details = () => {
   const form = useRef();
