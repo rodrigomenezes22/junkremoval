@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { Box, Button, Stack, TextField } from "@mui/material";
+import { Box, Button, Stack, TextField, Typography } from "@mui/material";
 import Title from "./Title";
 import Paragraph from "./Paragraph";
 import emailjs from "@emailjs/browser";
@@ -50,6 +50,10 @@ const Details = () => {
         mx={0}
         textAlign={"center"}
       />
+      <Typography variant="h4" sx={{ paddingBottom: "2rem" }}>
+        +1 (561) 715-0548
+      </Typography>
+
       <Button
         variant="contained"
         startIcon={<PhoneIcon />}
