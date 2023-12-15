@@ -23,7 +23,7 @@ import StorageImage from "../assets/storage.jpg";
 import DisastersImage from "../assets/disasters.jpg";
 import CommercialImage from "../assets/commercial.jpg";
 import { List, ListItem, ListItemIcon, ListItemText } from "@mui/material";
-
+import { Helmet } from "react-helmet";
 import imageOne from "../assets/pexels-alex-staudinger-1732414.jpg";
 
 import Stack from "@mui/material/Stack";
@@ -37,6 +37,13 @@ function CityPage() {
 
   return (
     <div>
+      <Helmet>
+        <title>{currentCity[0].name} Junk Removal Services</title>
+        <meta
+          name="description"
+          content={`${currentCity[0].name} Junk Removal Services`}
+        />
+      </Helmet>
       <Box
         height="50vh"
         width="100%"
