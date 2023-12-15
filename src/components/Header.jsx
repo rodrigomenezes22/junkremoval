@@ -181,7 +181,7 @@ const Header = () => {
               variants={fadeInTopBottom}
               initial="initial"
               whileInView="animate"
-              transition={{ duration: 0.6, delay: 1.25 }}
+              transition={{ duration: 0.6, delay: 0.25 }}
               viewport={{ once: true }}>
               <CarCrashIcon sx={{ fontSize: 60, color: "orange" }} />
               <Typography variant="h6" component="h6" color={"orange"}>
@@ -194,7 +194,7 @@ const Header = () => {
               variants={fadeInTopBottom}
               initial="initial"
               whileInView="animate"
-              transition={{ duration: 0.6, delay: 1.5 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
               viewport={{ once: true }}>
               <ConstructionIcon sx={{ fontSize: 60, color: "orange" }} />
               <Typography variant="h6" component="h6" color={"orange"}>
@@ -207,7 +207,7 @@ const Header = () => {
               variants={fadeInTopBottom}
               initial="initial"
               whileInView="animate"
-              transition={{ duration: 0.6, delay: 1.75 }}
+              transition={{ duration: 0.6, delay: 0.75 }}
               viewport={{ once: true }}>
               <ApartmentIcon sx={{ fontSize: 60, color: "orange" }} />
               <Typography variant="h6" component="h6" color={"orange"}>
