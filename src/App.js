@@ -15,11 +15,6 @@ import Footer from "./components/Footer/Footer";
 
 function App() {
   const theme = createTheme({
-    palette: {
-      primary: {
-        main: "#FFFFFF",
-      },
-    },
     typography: {
       h3: {
         fontSize: "2rem",
