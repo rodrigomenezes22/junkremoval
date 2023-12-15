@@ -11,6 +11,8 @@ import Grid from "@mui/material/Grid";
 import ConstructionIcon from "@mui/icons-material/Construction";
 import Container from "@mui/material/Container";
 import ApartmentIcon from "@mui/icons-material/Apartment";
+import { delay, motion } from "framer-motion";
+import Stack from "@mui/material/Stack";
 const Header = () => {
   const CustomBox = styled(Box)(({ theme }) => ({
     minHeight: "50vh",
@@ -39,6 +41,21 @@ const Header = () => {
     },
   }));
 
+  const fadeInRightToLeft = {
+    initial: { opacity: 0, x: 100 },
+    animate: { opacity: 1, x: 0 },
+  };
+
+  const fadeInLeftToRight = {
+    initial: { opacity: 0, x: -100 },
+    animate: { opacity: 1, x: 0 },
+  };
+
+  const fadeInTopBottom = {
+    initial: { opacity: 0, y: -100 },
+    animate: { opacity: 1, y: 0 },
+  };
+
   return (
     <>
       <CustomBox component="header">
@@ -46,79 +63,108 @@ const Header = () => {
         <Box
           component="section"
           sx={{ textAlign: "center", height: "auto", paddingBottom: "2rem" }}>
-          <Typography
-            variant="h3"
-            component="h1"
-            sx={{
-              fontWeight: 700,
-              color: "#fff",
-            }}>
-            Got Junk? We got a guy!
-          </Typography>
-
-          <Typography
-            variant="p"
-            component="p"
-            sx={{
-              py: 3,
-              lineHeight: 1.6,
-              color: "#fff",
-            }}>
-            Our specialists can help you, apartment clean-up. Construction
-            cleaning, anything! Call us!
-          </Typography>
-
-          <Box>
-            <Button
-              variant="contained"
-              startIcon={<PhoneIcon />}
-              component={Link}
-              to={"/contact"}
+          <motion.div
+            variants={fadeInLeftToRight}
+            initial="initial"
+            whileInView="animate"
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}>
+            <Typography
+              variant="h3"
+              component="h1"
               sx={{
-                mr: 2,
-                px: 4,
-                py: 1,
-                fontSize: "0.9rem",
-                textTransform: "capitalize",
-                borderRadius: 0,
-                borderColor: "#14192d",
+                fontWeight: 700,
                 color: "#fff",
-                backgroundColor: "#14192d",
-                "&&:hover": {
-                  backgroundColor: "#343a55",
-                },
-                "&&:focus": {
-                  backgroundColor: "#343a55",
-                },
               }}>
-              Contact us!
-            </Button>
-            <Button
-              startIcon={<WhatsAppIcon />}
-              component={Link}
-              to={"/about"}
-              variant="outlined"
+              Got Junk? We got a guy!
+            </Typography>
+          </motion.div>
+          <motion.div
+            variants={fadeInLeftToRight}
+            initial="initial"
+            whileInView="animate"
+            transition={{ duration: 0.6, delay: 0.25 }}
+            viewport={{ once: true }}>
+            <Typography
+              variant="p"
+              component="p"
               sx={{
-                px: 4,
-                py: 1,
-                fontSize: "0.9rem",
-                textTransform: "capitalize",
-                borderRadius: 0,
+                py: 3,
+                lineHeight: 1.6,
                 color: "#fff",
-                backgroundColor: "transparent",
-                borderColor: "#fff",
-                "&&:hover": {
-                  color: "#343a55",
-                  borderColor: "#343a55",
-                },
-                "&&:focus": {
-                  color: "#343a55",
-                  borderColor: "#343a55",
-                },
               }}>
-              Live Chat!
-            </Button>
-          </Box>
+              Our specialists can help you, apartment clean-up. Construction
+              cleaning, anything! Call us!
+            </Typography>
+          </motion.div>
+          <Stack
+            direction={{ xs: "column", md: "row" }}
+            justifyContent={"center"}
+            alignItems={"center"}
+            gap={3}>
+            <motion.div
+              variants={fadeInLeftToRight}
+              initial="initial"
+              whileInView="animate"
+              transition={{ duration: 0.6, delay: 0.5 }}
+              viewport={{ once: true }}>
+              <Button
+                variant="contained"
+                startIcon={<PhoneIcon />}
+                component={Link}
+                to={"/contact"}
+                sx={{
+                  px: 4,
+                  py: 1,
+                  fontSize: "0.9rem",
+                  textTransform: "capitalize",
+                  borderRadius: 0,
+                  borderColor: "#14192d",
+                  color: "#fff",
+                  backgroundColor: "#14192d",
+                  "&&:hover": {
+                    backgroundColor: "#343a55",
+                  },
+                  "&&:focus": {
+                    backgroundColor: "#343a55",
+                  },
+                }}>
+                Contact us!
+              </Button>
+            </motion.div>
+            <motion.div
+              variants={fadeInLeftToRight}
+              initial="initial"
+              whileInView="animate"
+              transition={{ duration: 0.6, delay: 0.75 }}
+              viewport={{ once: true }}>
+              <Button
+                startIcon={<WhatsAppIcon />}
+                component={Link}
+                to={"/about"}
+                variant="outlined"
+                sx={{
+                  px: 4,
+                  py: 1,
+                  fontSize: "0.9rem",
+                  textTransform: "capitalize",
+                  borderRadius: 0,
+                  color: "#fff",
+                  backgroundColor: "transparent",
+                  borderColor: "#fff",
+                  "&&:hover": {
+                    color: "#343a55",
+                    borderColor: "#343a55",
+                  },
+                  "&&:focus": {
+                    color: "#343a55",
+                    borderColor: "#343a55",
+                  },
+                }}>
+                Live Chat!
+              </Button>
+            </motion.div>
+          </Stack>
         </Box>
       </CustomBox>
 
@@ -131,22 +177,43 @@ const Header = () => {
           justifyContent={"space-around"}
           padding={"4rem 0"}>
           <Grid item textAlign={"center"} padding={"2rem 0"}>
-            <CarCrashIcon sx={{ fontSize: 60, color: "orange" }} />
-            <Typography variant="h6" component="h6" color={"orange"}>
-              Junk Car Removal
-            </Typography>
+            <motion.div
+              variants={fadeInTopBottom}
+              initial="initial"
+              whileInView="animate"
+              transition={{ duration: 0.6, delay: 1.25 }}
+              viewport={{ once: true }}>
+              <CarCrashIcon sx={{ fontSize: 60, color: "orange" }} />
+              <Typography variant="h6" component="h6" color={"orange"}>
+                Junk Car Removal
+              </Typography>
+            </motion.div>
           </Grid>
           <Grid item textAlign={"center"} padding={"2rem 0"}>
-            <ConstructionIcon sx={{ fontSize: 60, color: "orange" }} />
-            <Typography variant="h6" component="h6" color={"orange"}>
-              Construction Site Junk Removal
-            </Typography>
+            <motion.div
+              variants={fadeInTopBottom}
+              initial="initial"
+              whileInView="animate"
+              transition={{ duration: 0.6, delay: 1.5 }}
+              viewport={{ once: true }}>
+              <ConstructionIcon sx={{ fontSize: 60, color: "orange" }} />
+              <Typography variant="h6" component="h6" color={"orange"}>
+                Construction Site Junk Removal
+              </Typography>
+            </motion.div>
           </Grid>
           <Grid item textAlign={"center"} padding={"2rem 0"}>
-            <ApartmentIcon sx={{ fontSize: 60, color: "orange" }} />
-            <Typography variant="h6" component="h6" color={"orange"}>
-              Rental Cleanup Service
-            </Typography>
+            <motion.div
+              variants={fadeInTopBottom}
+              initial="initial"
+              whileInView="animate"
+              transition={{ duration: 0.6, delay: 1.75 }}
+              viewport={{ once: true }}>
+              <ApartmentIcon sx={{ fontSize: 60, color: "orange" }} />
+              <Typography variant="h6" component="h6" color={"orange"}>
+                Rental Cleanup Service
+              </Typography>
+            </motion.div>
           </Grid>
         </Grid>
       </Container>
