@@ -54,16 +54,8 @@ const itemList = [
   },
 ];
 
-const DrawerItem = () => {
+const DrawerItem = ({ handleDrawerOpen, openNav }) => {
   const theme = useTheme();
-  const [open, setOpen] = useState(false);
-  const handleDrawerOpen = () => {
-    setOpen(true);
-  };
-
-  const handleDrawerClose = () => {
-    setOpen(false);
-  };
 
   return (
     <>
@@ -72,61 +64,9 @@ const DrawerItem = () => {
         aria-label="open drawer"
         edge="end"
         onClick={handleDrawerOpen}
-        sx={{ ...(open && { display: "none" }) }}>
+        sx={{ ...(openNav && { display: "none" }), zIndex: "1000000" }}>
         <MenuIcon />
       </IconButton>
-
-      <Drawer
-        sx={{
-          flexGrow: 1,
-          flexShrink: 0,
-          "& .MuiDrawer-paper": {
-            width: drawerWidth,
-          },
-        }}
-        variant="persistent"
-        anchor="right"
-        open={open}>
-        <DrawerHeader>
-          <IconButton onClick={handleDrawerClose}>
-            {theme.direction === "rtl" ? (
-              <ChevronLeftIcon />
-            ) : (
-              <ChevronRightIcon />
-            )}
-          </IconButton>
-        </DrawerHeader>
-        <Divider />
-        <List>
-          {itemList.map((item) => {
-            const { text } = item;
-            return (
-              <ListItem
-                key={text}
-                component={Link}
-                to={item.to}
-                sx={{
-                  color: "#414141",
-                  "&:hover": {
-                    backgroundColor: "#e9e5e5",
-                    color: "#1c2859",
-                  },
-                }}>
-                <ListItemIcon
-                  sx={{
-                    "&:hover": {
-                      backgroundColor: "transparent",
-                      color: "#1c2859",
-                    },
-                  }}>
-                  {item.icon}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItem>
-            );
-          })}
-        </List>
-      </Drawer>
     </>
   );
 };

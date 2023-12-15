@@ -72,6 +72,8 @@ const Header = () => {
             <Button
               variant="contained"
               startIcon={<PhoneIcon />}
+              component={Link}
+              to={"/contact"}
               sx={{
                 mr: 2,
                 px: 4,
