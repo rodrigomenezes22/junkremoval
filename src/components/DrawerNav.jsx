@@ -88,17 +88,11 @@ const DrawerNav = ({
           "& .MuiDrawer-paper": {
             width: drawerWidth,
           },
-          "& .MuiDrawer-root": {
-            position: "absolute",
-          },
-          "& .MuiPaper-root": {
-            position: "absolute",
-          },
         }}
         variant="persistent"
         anchor="right"
         open={openNav}>
-        <DrawerHeader>
+        <DrawerHeader sx={{ padding: "0px" }}>
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === "rtl" ? (
               <ChevronLeftIcon />

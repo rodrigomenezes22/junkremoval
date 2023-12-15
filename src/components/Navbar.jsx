@@ -5,6 +5,7 @@ import Button from "@mui/material/Button";
 import floridaCities from "../object/cities.json"; // Import the JSON module
 import Logo from "../assets/logo.svg";
 import DrawerNav from "./DrawerNav";
+
 import {
   AppBar,
   Toolbar,
@@ -76,6 +77,9 @@ const Navbar = () => {
     setOpenNav(false);
   };
 
+  const handlePhoneClick = () => {
+    window.location.href = "tel:+5617150548";
+  };
   return (
     <>
       <AppBar
@@ -84,23 +88,24 @@ const Navbar = () => {
         sx={{
           backgroundColor: "rgba(0,0,0,0.9)",
           backdropFilter: "blur(10px)",
-          overflow: "visible",
         }}
         elevation={0}>
-        <StyledToolbar sx={{ overflow: "visible" }}>
+        <StyledToolbar>
           <Link to={"/"} style={{ textDecoration: "none" }}>
             <img src={Logo} alt="561 Junk Guys" width={"180px"} />
           </Link>
           <Stack direction={"row"}>
-            <Box>
-              <IconButton sx={{ color: "white" }}>
+            <Box
+              sx={{
+                display: { xs: "block", sm: "none", lg: "none", xl: "none" },
+              }}>
+              <IconButton sx={{ color: "white" }} onClick={handlePhoneClick}>
                 <LocalPhoneIcon />
               </IconButton>
             </Box>
             <Box
               sx={{
                 display: { xs: "block", sm: "none" },
-                overflow: "visible",
               }}>
               <DrawerItem
                 handleDrawerOpen={handleDrawerOpen}
@@ -123,7 +128,7 @@ const Navbar = () => {
                       color: "#fff",
                       "&:hover": {
                         backgroundColor: "transparent",
-                        color: "#1e2a5a",
+                        color: "yellow",
                       },
                     }}>
                     <ListItemText primary={text} />

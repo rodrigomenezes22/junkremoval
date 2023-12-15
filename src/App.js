@@ -8,7 +8,7 @@ import Locations from "./pages/Locations";
 import Contact from "./pages/Contact";
 import CityPage from "./city/CityPage";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-
+import ScrollToTop from "./components/ScrollToTop";
 //componentes
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer/Footer";
@@ -30,6 +30,7 @@ function App() {
       <BrowserRouter>
         <ThemeProvider theme={theme}>
           <Navbar />
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />

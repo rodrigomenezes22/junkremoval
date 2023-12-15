@@ -3,8 +3,12 @@ import { Box, Button, Stack, TextField } from "@mui/material";
 import Title from "./Title";
 import Paragraph from "./Paragraph";
 import emailjs from "@emailjs/browser";
+import PhoneIcon from "@mui/icons-material/Phone";
 
 const Details = () => {
+  const handlePhoneClick = () => {
+    window.location.href = "tel:+5617150548";
+  };
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -46,6 +50,29 @@ const Details = () => {
         mx={0}
         textAlign={"center"}
       />
+      <Button
+        variant="contained"
+        startIcon={<PhoneIcon />}
+        onClick={handlePhoneClick}
+        sx={{
+          mr: 2,
+          px: 4,
+          py: 1,
+          fontSize: "0.9rem",
+          textTransform: "capitalize",
+          borderRadius: 0,
+          borderColor: "#14192d",
+          color: "#fff",
+          backgroundColor: "#14192d",
+          "&&:hover": {
+            backgroundColor: "#343a55",
+          },
+          "&&:focus": {
+            backgroundColor: "#343a55",
+          },
+        }}>
+        Call now
+      </Button>
 
       <Box
         sx={{
