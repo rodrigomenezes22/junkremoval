@@ -28,7 +28,7 @@ const Footer = () => {
   const BoxRow = styled(Box)(({ theme }) => ({
     display: "flex",
     flexDirection: "row",
-    backgroundColor: "#ededed",
+    backgroundColor: "#000",
     flex: 1,
     [theme.breakpoints.down("sm")]: {
       flexDirection: "column",
@@ -44,7 +44,7 @@ const Footer = () => {
         px: 2,
       }}>
       <StackColumn>
-        <FooterTitle text={"address"} />
+        <FooterTitle className="text-white" text={"address"} />
         <FooterLink text={"1030 N State Street - FL"} />
         <FooterLink text={"561-213-9528"} />
         <FooterLink text={"info@junkremovalservices.com"} />
@@ -61,7 +61,10 @@ const Footer = () => {
         <FooterTitle text={"Our Locations"} />
         {cities.map((city, index) => (
           <>
-            <Link key={index} href={`../city/${city.link}`}>
+            <Link
+              style={{ color: "white" }}
+              key={index}
+              href={`../city/${city.link}`}>
               {city.name}
             </Link>
           </>
@@ -79,9 +82,9 @@ const Footer = () => {
             href="#"
             variant="body2"
             sx={{
-              color: "#414141",
+              color: "#ccc",
               "&:hover": {
-                color: "#1c2859",
+                color: "#fff",
               },
             }}>
             <InstagramIcon />
@@ -90,9 +93,9 @@ const Footer = () => {
             href="#"
             variant="body2"
             sx={{
-              color: "#414141",
+              color: "#ccc",
               "&:hover": {
-                color: "#1c2859",
+                color: "#fff",
               },
             }}>
             <FacebookIcon />

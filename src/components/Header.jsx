@@ -53,7 +53,7 @@ const Header = () => {
               fontWeight: 700,
               color: "#fff",
             }}>
-            Junk Removal Services
+            Got Junk? We got a guy!
           </Typography>
 
           <Typography
@@ -128,19 +128,19 @@ const Header = () => {
           columnSpacing={"1.5rem"}
           justifyContent={"space-around"}
           padding={"4rem 0"}>
-          <Grid item textAlign={"center"}>
+          <Grid item textAlign={"center"} padding={"2rem 0"}>
             <CarCrashIcon sx={{ fontSize: 60, color: "orange" }} />
             <Typography variant="h6" component="h6" color={"orange"}>
               Junk Car Removal
             </Typography>
           </Grid>
-          <Grid item textAlign={"center"}>
+          <Grid item textAlign={"center"} padding={"2rem 0"}>
             <ConstructionIcon sx={{ fontSize: 60, color: "orange" }} />
             <Typography variant="h6" component="h6" color={"orange"}>
               Construction Site Junk Removal
             </Typography>
           </Grid>
-          <Grid item textAlign={"center"}>
+          <Grid item textAlign={"center"} padding={"2rem 0"}>
             <ApartmentIcon sx={{ fontSize: 60, color: "orange" }} />
             <Typography variant="h6" component="h6" color={"orange"}>
               Rental Cleanup Service

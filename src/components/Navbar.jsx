@@ -3,6 +3,8 @@ import React from "react";
 import { useState } from "react";
 import Button from "@mui/material/Button";
 import floridaCities from "../object/cities.json"; // Import the JSON module
+import Logo from "../assets/logo.svg";
+
 import {
   AppBar,
   Toolbar,
@@ -67,18 +69,13 @@ const Navbar = () => {
       component="nav"
       position="sticky"
       sx={{
-        backgroundColor: "orange",
+        backgroundColor: "rgba(0,0,0,0.9)",
+        backdropFilter: "blur(10px)",
       }}
       elevation={0}>
       <StyledToolbar>
         <Link to={"/"} style={{ textDecoration: "none" }}>
-          <Typography
-            variant="h5"
-            color={"primary"}
-            component="h1"
-            fontWeight={"900"}>
-            JUNKREMOVAL<span style={{ color: "black" }}>PROS</span>
-          </Typography>
+          <img src={Logo} alt="561 Junk Guys" width={"180px"} />
         </Link>
         <Box sx={{ display: { xs: "block", sm: "none" } }}>
           <DrawerItem />
